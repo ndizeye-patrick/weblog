@@ -19,14 +19,14 @@ const Widget = () => {
     <div className="flex items-center justify-between mb-4">
       
     </div>
-    <div className="shadow-xl bg-white w-full rounded-lg flex justify-evenly items-center h-[200px]">
+    <div className="shadow-xl  w-full rounded-lg flex justify-evenly gap-3 items-center h-[200px]">
     <Link to="/welcome_explore">
-    <button className="bg-gradient-to-r animate-bounce font-bold from-blue-400 via-purple-500 to-pink-500 hover:bg-gradient-to-l hover:from-pink-400 hover:via-blue-400 hover:to-indigo-500 rounded-xl text-white px-6 py-4">
+    <button className="bg-gradient-to-r  animate-bounce font-bold from-blue-400 via-purple-500 to-pink-500 hover:bg-gradient-to-l hover:from-pink-400 hover:via-blue-400 hover:to-indigo-500 rounded-xl text-white px-5 py-4">
     Browse Blogs
   </button>
   </Link>
   <Link to="/sign-up">
-  <button className="bg-gradient-to-r font-bold animate-bounce from-blue-400 via-purple-500 to-pink-500 hover:bg-gradient-to-l hover:from-pink-400 hover:via-blue-400 hover:to-indigo-500 rounded-xl text-white px-6 py-4">
+  <button className="bg-gradient-to-r font-bold animate-bounce from-blue-400 via-purple-500 to-pink-500 hover:bg-gradient-to-l hover:from-pink-400 hover:via-blue-400 hover:to-indigo-500 rounded-xl text-white px-5 py-4">
     Get Started Now
   </button>
   </Link>
@@ -61,15 +61,19 @@ const Widget = () => {
         <h3 className="font-semibold text-xl mb-4 text-gray-700">Featured Blogs</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Featured Blog 1 */}
-          <div className="p-4 bg-gray-100 rounded-lg shadow">
+          <Link to='/welcome_explore'>
+          <div className="p-4 bg-gray-100 rounded-lg shadow hover:shadow-black hover:shadow-xl">
             <h4 className="font-bold text-gray-800">How to Start Your Blog</h4>
             <p className="text-gray-600 mt-2 text-sm">Explore tips and strategies to start your first blog and grow your audience.</p>
           </div>
+          </Link>
+          <Link to='/welcome_explore'>
           {/* Featured Blog 2 */}
-          <div className="p-4 bg-gray-100 rounded-lg shadow">
+          <div className="p-4 bg-gray-100 rounded-lg shadow hover:shadow-black hover:shadow-xl">
             <h4 className="font-bold text-gray-800">Top 10 Blogging Tools</h4>
             <p className="text-gray-600 mt-2 text-sm">Discover the best tools for managing and optimizing your blogging experience.</p>
           </div>
+          </Link>
         </div>
       </div>
 
