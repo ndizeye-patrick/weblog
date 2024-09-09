@@ -24,9 +24,14 @@ module.exports = {
         'primary-600': '#5D5FEF',
         'secondary-500': '#FFB620',
         'slate': 'slate',
+        'slate-50': 'slate',
+        'slate-100': 'slate',
+        'slate-200': 'slate',
+        'slate-950': 'slate',
         'off-white': '#D0DFFF',
         'red': 'red',
         'red-500': 'red',
+        'red-900': 'red',
         'dark-1': '#fbfbfb',
         'dark-2': '#fbfbfb',
         'dark-3': '#101012',
@@ -35,6 +40,7 @@ module.exports = {
         'light-2': '#EFEFEF',
         'light-3': '#7878A3',
         'light-4': '#5C5C7B',
+        'white':'#ffffff',
       },
 
     

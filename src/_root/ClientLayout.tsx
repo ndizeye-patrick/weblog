@@ -16,9 +16,9 @@ const ClientLayout = () => {
       {/* </div> */}
 
       {/* Main content */}
-      <TopbarClient className="relative z-10" />
+      <TopbarClient  />
       
-      <LeftSidebarC className="relative z-10" />
+      <LeftSidebarC />
 
       <section className="relative  flex flex-1 h-full bg-black bg-grey-100 bg-opacity-0 bg-cover bg-center h-screen">
   {/* Emoji decorations */}
@@ -31,7 +31,7 @@ const ClientLayout = () => {
   <Outlet />
 </section>
 
-      <BottombarC className="relative z-10" />
+      <BottombarC  />
     </div>
   );
 };
