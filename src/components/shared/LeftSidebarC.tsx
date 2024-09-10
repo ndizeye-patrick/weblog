@@ -1,27 +1,34 @@
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation
+  // , useNavigate
+ } from "react-router-dom";
 
 import { INavLink } from "@/types";
 import {  sidebarLinksC } from "@/constants";
-import { Loader } from "@/components/shared";
-import { useSignOutAccount } from "@/lib/react-query/queries";
-import { useUserContext, INITIAL_USER } from "@/context/AuthContext";
+// // import { Loader } from "@/components/shared";
+// import { useSignOutAccount } from "@/lib/react-query/queries";
+// import { useUserContext, INITIAL_USER } from "@/context/AuthContext";
 
 const LeftSidebarC = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { user, setUser, setIsAuthenticated, isLoading } = useUserContext();
+  // const { 
+  //     // user,
+  //     setUser,
+  //     setIsAuthenticated,
+  //     // isLoading 
+  //     } = useUserContext();
 
-  const { mutate: signOut } = useSignOutAccount();
+  // const { mutate: signOut } = useSignOutAccount();
 
-  const handleSignOut = async (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    signOut();
-    setIsAuthenticated(false);
-    setUser(INITIAL_USER);
-    navigate("/sign-in");
-  };
+  // const handleSignOut = async (
+  //   e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  // ) => {
+  //   e.preventDefault();
+  //   signOut();
+  //   setIsAuthenticated(false);
+  //   setUser(INITIAL_USER);
+  //   navigate("/sign-in");
+  // };
 
   return (
     <nav className="leftsidebar shadow-xl">

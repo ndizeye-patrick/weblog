@@ -87,10 +87,9 @@
 // };
 
 // export default LandingPage;
-import { Models } from "appwrite";
 
 // import { useToast } from "@/components/ui/use-toast";
-import { Loader, PostCard, UserCard } from "@/components/shared";
+import { Loader, UserCard } from "@/components/shared";
 import { useGetRecentPosts, useGetUsers } from "@/lib/react-query/queries";
 import Widget from "@/components/shared/Widget";
 const currentYear = new Date().getFullYear();
@@ -99,8 +98,8 @@ const LandingPage = () => {
   // const { toast } = useToast();
 
   const {
-    data: posts,
-    isLoading: isPostLoading,
+    // data: posts,
+    // isLoading: isPostLoading,
     isError: isErrorPosts,
   } = useGetRecentPosts();
   const {

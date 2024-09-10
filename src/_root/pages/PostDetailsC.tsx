@@ -44,7 +44,7 @@ import {  PostStats } from "@/components/shared";
 import {
   useGetPostById,
   useGetUserPosts,
-  useDeletePost,
+  // useDeletePost,
 } from "@/lib/react-query/queries";
 import { multiFormatDateString } from "@/lib/utils";
 import { useUserContext } from "@/context/AuthContext";
@@ -56,19 +56,21 @@ const PostDetailsC = () => {
   const { user } = useUserContext();
 
   const { data: post, isLoading } = useGetPostById(id);
-  const { data: userPosts, isLoading: isUserPostLoading } = useGetUserPosts(
+  const { 
+    data: userPosts,
+     isLoading: isUserPostLoading } = useGetUserPosts(
     post?.creator.$id
   );
-  const { mutate: deletePost } = useDeletePost();
+  // const { mutate: deletePost } = useDeletePost();
 
   const relatedPosts = userPosts?.documents.filter(
     (userPost) => userPost.$id !== id
   );
 
-  const handleDeletePost = () => {
-    deletePost({ postId: id, imageId: post?.imageId });
-    navigate(-1);
-  };
+  // const handleDeletePost = () => {
+  //   deletePost({ postId: id, imageId: post?.imageId });
+  //   navigate(-1);
+  // };
 
   return (
     <div className="post_details-container">

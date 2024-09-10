@@ -86,7 +86,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (!isPublicRoute) {
       // If not a public route, check authentication
       if (cookieFallback === "[]" || cookieFallback === null || cookieFallback === undefined) {
-        navigate("/sign-in");
+        navigate("/hello");
       } else {
         checkAuthUser();
       }
